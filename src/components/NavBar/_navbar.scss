@@ -1,0 +1,99 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.NavContainer {
+  z-index: 200;
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  .NavContent {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 80px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    /* background-color: #fff; */
+    .NavLogo {
+      width: 30%;
+      cursor: pointer;
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #fff;
+        font-family: var(--primary-font);
+        font-style: bold;
+        span {
+          color: yellow;
+        }
+      }
+    }
+    .NavLinks {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 20%;
+      // margin-left: 10%;
+      .NavLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--primary-font);
+        font-weight: 600;
+        font-size: 24px;
+        cursor: pointer;
+        color: #f3f4f3;
+        height: 100%;
+        &:hover {
+          border-bottom: 4px solid #fff;
+        }
+      }
+    }
+    .NavSearchArea {
+      width: 30%;
+      height: 40px;
+      border-radius: 20px;
+      border: #f3f3f3 0.5px solid;
+      padding: 8px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      outline: #fff;
+      .NavSearchIcon {
+        width: 32px;
+        height: 32px;
+        color: white;
+        cursor: pointer;
+      }
+      .NavSearchBar {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        font-family: var(--primary-font);
+        font-size: 18px;
+      }
+      .NavSearchBar::placeholder {
+        color: #f3f3f3;
+        font-family: var(--primary-font);
+        font-size: 18px;
+      }
+    }
+  }
+}

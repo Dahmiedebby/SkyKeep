@@ -1,0 +1,171 @@
+@import "./variables";
+@mixin header($color: $primary-color, $size: 40px, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-style: normal;
+}
+
+// Headers for all titles and h-series
+@mixin xl-header($color: $primary-color) {
+  font-size: 70px;
+  font-weight: 900;
+  font-family: $secondary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin lg-header($color: $primary-color) {
+  font-size: 60px;
+  font-weight: 500;
+  font-family: $secondary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin md-header($color: $primary-color) {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: $secondary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin sm-header($color: $primary-color) {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: $secondary-font;
+  font-style: normal;
+  color: $color;
+}
+
+// Sub headers section
+@mixin xl-sub-header($color: $primary-color) {
+  font-size: 50px;
+  font-weight: 400;
+  font-family: $secondary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin lg-sub-header($color: $primary-color) {
+  font-size: 40px;
+  font-weight: 300;
+  font-family: $secondary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin md-sub-header($color: $primary-color) {
+  font-size: 32px;
+  font-weight: 300;
+  font-family: $secondary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin sm-sub-header($color: $primary-color) {
+  font-size: 25px;
+  font-weight: 300;
+  font-family: $secondary-font;
+  font-style: normal;
+  color: $color;
+}
+
+// Mixin for texts, large and small texts across all screens
+@mixin lg-text($color: $primary-color) {
+  font-size: 32px;
+  font-family: $primary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin md-text($color: $primary-color) {
+  font-size: 25px;
+  font-family: $primary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin sm-text($color: $primary-color) {
+  font-size: 20px;
+  font-family: $primary-font;
+  font-style: normal;
+  color: $color;
+}
+
+// Mixin for paragraphs, large and small texts across all screens
+@mixin lg-parag($color: $primary-color) {
+  font-size: 20px;
+  font-family: $primary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin md-parag($color: $primary-color) {
+  font-size: 16px;
+  font-family: $primary-font;
+  font-style: normal;
+  color: $color;
+}
+@mixin sm-parag($color: $primary-color) {
+  font-size: 14px;
+  font-family: $primary-font;
+  font-style: normal;
+  color: $color;
+}
+
+// Mixin for a special and non-generic text and paragraph
+@mixin font(
+  $size: 24px,
+  $family: $primary-font,
+  $style: normal,
+  $color: $primary-color
+) {
+  font-size: $size;
+  font-family: $family;
+  font-style: $style;
+  color: $color;
+}
+
+// All container mixin categories fall here
+@mixin container(
+  $direction: row,
+  $justify: center,
+  $align: center,
+  $height: auto
+) {
+  height: $height;
+  padding: 0;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin container-fluid(
+  $width: 100%,
+  $height: auto,
+  $display: flex,
+  $direction: row,
+  $overflow: hidden,
+  $justify: center,
+  $align: center
+) {
+  width: $width;
+  height: $height;
+  display: $display;
+  flex-direction: $direction;
+  overflow-x: $overflow;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin grid-container() {
+}
+
+// Other important mixins
+@mixin border($width, $style, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+@mixin box-shadow(
+  $X: 3px,
+  $Y: -5px,
+  $blur: 10px,
+  $spread: 5px,
+  $color: rgba(0, 0, 0, 0.3)
+) {
+  box-shadow: $X $Y $blur $spread $color;
+}
