@@ -1,14 +1,8 @@
+# React + Vite
 
-This Weather App is a simple web application that allows users to check the current weather conditions for a given location. It utilizes the OpenWeatherMap API to fetch weather data and displays it in a user-friendly interface.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Features
+Currently, two official plugins are available:
 
-	•	Current Weather: Display the current temperature, weather description, humidity, wind speed, and other relevant weather data for a specified location.
-	•	Search Functionality: Users can enter a city name or zip code to get weather information for that location.
-	•	Responsive Design: The app is designed to work seamlessly on desktop and mobile devices, ensuring a consistent experience across different screen sizes.
-
-Technologies Used
-
-	•	HTML/CSS: Basic structure and styling of the web application.
-	•	JavaScript : Used for fetching data from the OpenWeatherMap API and updating the DOM based on the retrieved data.
-
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
