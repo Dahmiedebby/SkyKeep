@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import apiKeys from "./apiKeys";
-import WeatherInfo from "./WeatherInfo";
-import Loading from "./Loading";
+import apiKeys from "../../apiKeys";
+import WeatherInfo from "../WeatherInfo/WeatherInfo";
+import Loading from "../Loader/Loading";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState({

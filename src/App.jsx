@@ -1,12 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="AppContainer">
-      <LandingPage />
+      {/* <LandingPage /> */}
+      <Navbar />
     </div>
   );
 }

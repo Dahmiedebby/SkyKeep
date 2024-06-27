@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import apiKeys from "./apiKeys";
+import apiKeys from "../../apiKeys";
+import PropTypes from "prop-types";
 import ReactAnimatedWeather from "react-animated-weather";
 
 function Forcast({ icon, weather: currentWeather }) {
@@ -113,5 +114,9 @@ function Forcast({ icon, weather: currentWeather }) {
     </div>
   );
 }
+Forcast.propTypes = {
+  icon: PropTypes.string.isRequired,
+  weather: PropTypes.string.isRequired,
+};
 
 export default Forcast;

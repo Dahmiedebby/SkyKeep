@@ -1,8 +1,8 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
-import Clock from "react-live-clock";
-import Forcast from "./Forcast";
-import DateTime from "./DateTime";
+import Forcast from "../Forecast/Forecast";
+import DateTime from "../DateTime/DateTime";
+import PropTypes from "prop-types";
 
 const defaults = {
   color: "white",
@@ -34,5 +34,14 @@ const WeatherInfo = ({ data }) => (
     <Forcast icon={data.icon} weather={data.main} />
   </div>
 );
+WeatherInfo.propTypes = {
+  data: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    main: PropTypes.string.isRequired,
+    temperatureC: PropTypes.number.isRequired,
+  }).isRequired,
+};
 
 export default WeatherInfo;

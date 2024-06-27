@@ -1,5 +1,5 @@
 import React from "react";
-import loader from "./images/WeatherIcons.gif";
+import loader from "https://cdn.dribbble.com/users/6846220/screenshots/20068634/media/2223caa2992f6f54edd38f60ce5c0087.gif";
 
 const Loading = () => (
   <React.Fragment>
