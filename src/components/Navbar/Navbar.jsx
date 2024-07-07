@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import "./_navbar.scss";
+import PropTypes from "prop-types";
 
-const Navbar = () => {
+const Navbar = ({ handleSearch }) => {
+  const [isInput, setIsInput] = useState("");
+
+  const onKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSearch(isInput);
+    }
+  };
   return (
     <div className="NavContainer">
       <div className="NavContent">
@@ -23,11 +31,18 @@ const Navbar = () => {
             type="text"
             placeholder="Search for a city..."
             className="NavSearchBar"
+            name="searchQuery"
+            onKeyPress={onKeyPress}
+            value={isInput}
+            onChange={(event) => setIsInput(event.target.value)}
           />
         </div>
       </div>
     </div>
   );
+};
+Navbar.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
 };
 
 export default Navbar;

@@ -1,0 +1,81 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.WeatherContainer {
+  background-color: cornflowerblue;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .WeatherContent {
+    margin-top: 162px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .HeroSection {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      h2 {
+        font-weight: 600;
+        color: #fff;
+        font-family: var(--primary-font);
+        font-size: 3rem;
+      }
+      p {
+        font-weight: 300;
+        color: #fff;
+        font-family: var(--primary-font);
+        font-size: 1.2rem;
+        width: 60%;
+        text-align: center;
+        line-height: 30px; /* 150% */
+      }
+    }
+    .MainSection {
+      margin-top: 80px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 200px;
+      .SearchArea {
+        width: 60%;
+        border: 1px solid #fff;
+        height: 48px;
+        border-radius: 24px;
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        .SearchIcon {
+          color: #fff;
+          height: 40px;
+          width: 40px;
+          cursor: pointer;
+        }
+        .SearchInput {
+          outline: none;
+          border: none;
+          height: 100%;
+          width: 80%;
+          font-family: var(--primary-font);
+          font-size: 18px;
+          color: #f3f3f3;
+        }
+        .SearchInput::placeholder {
+          font-family: var(--primary-font);
+          font-size: 18px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

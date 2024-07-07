@@ -1,0 +1,40 @@
+@font-face {
+  font-family: font-light;
+  src: url("./assets/fonts/DegularText-Regular.otf");
+}
+@font-face {
+  font-family: font-bold;
+  src: url("./assets/fonts/DegularText-Semibold.otf");
+}
+:root {
+  --primary-font: font-light;
+  --secondary-font: font-bold;
+  --primary-color: #1e2a34;
+  --secondary-color: #7ab516;
+  --tertiary-color: #757575;
+  --primary-background: #fff;
+  --secondary-background: #7ab516;
+  --tertiary-background: ;
+  --primary-border: #1e2a34;
+  --secondary-border: #757575;
+  --PhoneInputCountryFlag-borderRadius: 100%; /* Adjust the value as needed */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
