@@ -36,12 +36,10 @@ axios
 
 Weather Data: OpenWeather API
 
-#Third-Party Web Page
+# Third-Party Web Page
 
-### The WeatherChannel
+### The Weather Channel
 Weather.com/news
-
-For viewing weather reports from varies regions and countries
 
 # Getting Started
 ## Prerequisites
