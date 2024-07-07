@@ -4,7 +4,7 @@
 .WeatherContainer {
   background-color: cornflowerblue;
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,6 +41,7 @@
       margin-top: 80px;
       width: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       margin-bottom: 200px;
@@ -49,7 +50,7 @@
         border: 1px solid #fff;
         height: 48px;
         border-radius: 24px;
-        padding: 16px;
+        padding: 6px 16px;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -74,6 +75,105 @@
           font-family: var(--primary-font);
           font-size: 18px;
           color: #fff;
+        }
+      }
+      .ErrorMessage {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(7.5px);
+        -webkit-backdrop-filter: blur(7.5px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        z-index: 4;
+        span {
+          color: #f3f3f3;
+          font-family: var(--primary-font);
+          font-size: 1.5rem;
+        }
+      }
+      .WeatherDataWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-top: 40px;
+        border-radius: 10px;
+        // background-size: cover;
+        // background-repeat: center;
+        .WeatherData {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 24px;
+          background: rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(0.5px);
+          -webkit-backdrop-filter: blur(7.5px);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+          border-radius: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          z-index: 4;
+          padding: 24px;
+          span {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 8px;
+            align-items: center;
+            cursor: pointer;
+            &:hover {
+              color: #333;
+            }
+            .AddIcon {
+              color: #fff;
+              width: 24px;
+              height: 24px;
+            }
+            p {
+              font-size: 18px;
+              color: #fff;
+              font-weight: 400;
+              font-family: var(--primary-font);
+            }
+          }
+          .City {
+            h2 {
+              font-size: 2rem;
+              display: flex;
+              gap: 6px;
+              color: #333;
+            }
+          }
+          .Date {
+            span {
+              font-size: 18px;
+              color: #333;
+            }
+          }
+          .Temp {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            font-size: 18px;
+          }
+          .Conditions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            font-size: 20px;
+          }
         }
       }
     }

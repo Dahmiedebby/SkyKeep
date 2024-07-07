@@ -12,9 +12,15 @@ const Footer = () => {
           </h1>
         </div>
         <div className="FooterLinks">
-          <div className="FooterLink">Home</div>
-          <div className="FooterLink">News</div>
-          <div className="FooterLink">My Cities</div>
+          <a href="/" className="FooterLink">
+            Home
+          </a>
+          <a href="/https://weather.com/news" className="FooterLink">
+            News
+          </a>
+          <a href="/mycities" className="FooterLink">
+            My Cities
+          </a>
         </div>
         <div className="FooterCredits">
           <p>

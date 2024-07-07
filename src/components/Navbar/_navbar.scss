@@ -11,6 +11,17 @@
   align-items: flex-start;
   overflow-x: hidden;
   box-sizing: border-box;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  padding: 2px;
+  border: #fff 1px solid;
+  border-radius: 12px;
+  &.scrolled {
+    background-color: #fff;
+    .NavContent {
+      border: #007bff;
+    }
+  }
   .NavContent {
     width: 100%;
     height: 100%;
@@ -20,15 +31,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 80px;
-    border: 1px solid #fff;
-    border-radius: 8px;
+    border: 1px solid #007bff;
+    background-color: #fff;
+    border-radius: 12px;
     .NavLogo {
       width: 30%;
       cursor: pointer;
       h1 {
         font-size: 2.5rem;
         font-weight: 700;
-        color: #fff;
+        color: #007bff;
         font-family: var(--primary-font);
         font-style: bold;
         span {
@@ -52,18 +64,19 @@
         font-weight: 600;
         font-size: 24px;
         cursor: pointer;
-        color: #f3f4f3;
+        color: #007bff;
         height: 100%;
+        text-decoration: none;
         &:hover {
-          border-bottom: 4px solid #fff;
+          border-bottom: 4px solid #007bff;
         }
       }
     }
     .NavSearchArea {
-      width: 30%;
+      width: 20%;
       height: 40px;
       border-radius: 20px;
-      border: #f3f3f3 0.5px solid;
+      border: #007bff 0.5px solid;
       padding: 8px;
       box-sizing: border-box;
       display: flex;
@@ -75,7 +88,7 @@
       .NavSearchIcon {
         width: 32px;
         height: 32px;
-        color: white;
+        color: #007bff;
         cursor: pointer;
       }
       .NavSearchBar {
@@ -89,10 +102,15 @@
         font-size: 18px;
       }
       .NavSearchBar::placeholder {
-        color: #f3f3f3;
+        color: #ccc;
         font-family: var(--primary-font);
         font-size: 18px;
       }
+    }
+    .NavTime {
+      font-size: 18px;
+      color: #007bff;
+      font-style: bold;
     }
   }
 }

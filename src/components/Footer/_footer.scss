@@ -6,8 +6,9 @@
 
 .FooterContent {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -17,25 +18,26 @@
   h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #007bff;
 
     span {
-      color: #007bff;
+      color: yellow;
     }
   }
 }
 
 .FooterLinks {
   display: flex;
+  flex-direction: column;
   gap: 15px;
 
   .FooterLink {
     font-size: 16px;
-    color: #555;
+    color: #007bff;
     cursor: pointer;
 
     &:hover {
-      text-decoration: underline;
+      border-bottom: 2px solid #007bff;
     }
   }
 }
@@ -43,7 +45,7 @@
 .FooterCredits {
   p {
     font-size: 14px;
-    color: #777;
+    color: #007bff;
     text-align: center;
   }
 }

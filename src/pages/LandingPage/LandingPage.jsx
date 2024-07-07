@@ -1,42 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Weather from "../../components/Weather/Weather";
-import axios from "axios";
 import Footer from "../../components/Footer/Footer";
 
 const LandingPage = () => {
-  const [isInput, setIsInput] = useState("");
-  const [isWeather, setIsWeather] = useState({
-    loading: false,
-    data: {},
-    error: false,
-  });
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      if (scrollTop > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
 
-  const handleSearch = async (query) => {
-    setIsWeather({ ...isWeather, loading: true });
-    const url = import.meta.env.VITE_WEATHER_API_URL;
-    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-    await axios
-      .get(url, {
-        params: {
-          q: query,
-          units: "metric",
-          appid: apiKey,
-        },
-      })
-      .then((res) => {
-        console.log("res", res);
-        setIsWeather({ data: res.data, loading: false, error: false });
-      })
-      .catch((error) => {
-        setIsWeather({ ...isWeather, data: {}, error: true });
-        console.log("error", error);
-      });
-  };
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <Navbar handleSearch={(query) => handleSearch(query)} />
-      <Weather weather={isWeather} />
+      <Navbar isScrolled={isScrolled} />
+      <Weather />
       <Footer />
     </>
   );
