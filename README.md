@@ -1,14 +1,13 @@
 # SkyKeep
-SkyKeep is a modern weather application built with React, Vite, and SCSS. It provides users with current weather data for their current location and allows them to search for weather information from various cities. The application leverages several libraries for enhanced functionality and utilizes the OpenWeather API to fetch weather data.
+SkyKeep is a modern weather application built with React, Vite, and SCSS. It allows users to search for weather information from various cities. It also let's users to add city to a list where they can view the weather condition of the cities. The application leverages several libraries for enhanced functionality and utilizes the OpenWeather API to fetch weather data.
 
 # Features
-Current Location Weather: Automatically detects and displays the weather for the user's current location.
 
 City Weather Search: Allows users to search for weather information in various cities.
 
-Dynamic Weather Icons: Utilizes react-animated-weather for animated weather icons.
+Dynamic Weather Conditions: Utilizes gifs to show weather conditions..
 
-Real-Time Clock: Displays the current time using react-live-clock.
+Real-Time Clock: Displays the current time.
 
 Iconography: Uses react-icons for additional icons.
 
@@ -26,9 +25,6 @@ Framework: React
 Styling: SCSS
 
 # Libraries Used
-react-animated-weather
-
-react-live-clock
 
 react-icons
 
@@ -37,9 +33,19 @@ react-router-dom
 axios
 
 # Third-Party API
-## Weather Data: OpenWeather API
-## Getting Started
+
+Weather Data: OpenWeather API
+
+#Third-Party Web Page
+
+### The WeatherChannel
+Weather.com/news
+
+For viewing weather reports from varies regions and countries
+
+# Getting Started
 ## Prerequisites
+
 
 Make sure you have the following installed:
 
@@ -72,7 +78,7 @@ Open your browser and navigate to http://localhost:5173 to see the app in action
 
 
 # Usage
-Upon visiting the SkyKeep application, users will automatically see the weather for their current location if geolocation is enabled. Users can also search for weather data in various cities using the search functionality.
+Upon visiting the SkyKeep application, users can search for weather data in various cities using the search functionality. They can also add city by clicking on the Add City button to add a city to My Cities page. They can click on News and view weather news and reports from across the Globe.
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
 
