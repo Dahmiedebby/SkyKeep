@@ -55,7 +55,7 @@ Yarn
 Clone the repository:
 
 
-git clone https://github.com/Dahmiedebby
+git clone https://github.com/Dahmiedebby/SkyKeep
 
 yarn install
 
